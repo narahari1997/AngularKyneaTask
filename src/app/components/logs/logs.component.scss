@@ -1,0 +1,48 @@
+.docs {
+    .image{
+        display: flex;
+        margin-bottom: 5rem;
+        .img-block {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+.sensitivity{
+    display: flex;
+    label {
+        margin-right: 1rem;
+    }
+}
+
+.custom-file-upload {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #b2a1a1;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #286090;
+  }
+  
+  .custom-file-upload:active {
+    background-color: #204d74;
+  }
+  
+  
+  
+  
+  
+  

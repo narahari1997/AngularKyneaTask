@@ -1,0 +1,15 @@
+
+<div class="container">
+<nav>
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a routerLink="dashboard" (click)="changeState()"  routerLinkActive="active">Dashboard</a></li>
+        <li role="presentation"><a routerLink="logs" (click)="changeState()" routerLinkActive="active">Docs</a></li>
+    </ul>
+</nav>
+<br>
+<br><br>
+<div>
+    <app-dashboard *ngIf="isDashboardRoute"></app-dashboard>
+    <app-logs  *ngIf="!isDashboardRoute"></app-logs>
+</div>
+</div>

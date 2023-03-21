@@ -1,0 +1,55 @@
+<div class="docs">
+    <form [formGroup]="form">
+        <div class="uploadImage">
+            <input type="file" id="file-upload" style="display: none;" formControlName="selectimage" (change)="onImageSelected($event)">
+            <label for="file-upload" class="custom-file-upload">
+                Upload File
+            </label>
+            <label>{{fileName}}</label>   
+        </div>
+
+        <div class="sensitivity">
+            <label for="for-sensitivity">sensitivity:</label>
+            <input type="range" id="for-sensitivity" formControlName="range" min="1" max="3" [disabled]='!form.value.selectimage'>
+            <h3 *ngIf="form.value.range == 1">low</h3>
+            <h3 *ngIf="form.value.range == 2">medium</h3>
+            <h3 *ngIf="form.value.range == 3">high</h3>    
+        </div>
+
+        <div>
+            <label for="for-time">time</label>
+            <input type="time" id="for-time" formControlName="time" >
+        </div>
+     
+        <div class="analyze">
+            <button (click)="showFile()" class="custom-file-upload">analyze image</button>
+        </div>
+
+        <div class="image">
+            <div *ngIf="imageSrc" class="img-block">
+                <label for="">Original Image</label>
+                <img [src]="imageSrc" alt="Selected Image">
+            </div>
+            <div *ngIf="imageSrc && delayTime" class="img-block">
+                <label for="">Duplicate Image</label>
+                <img [src]="imageSrc" alt="Selected Image">
+            </div>
+        </div>
+
+        <table class="table table-bordered" *ngIf="delayTime">
+            <tbody>
+                <tr>
+                    <th>File name</th>
+                    <td>{{fileName}}</td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td>{{form.value.time}}</td>
+                </tr>
+            </tbody>
+
+        </table> 
+    </form>
+
+</div>
+

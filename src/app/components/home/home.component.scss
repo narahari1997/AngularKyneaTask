@@ -1,0 +1,16 @@
+.active {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+}
+.container {
+    nav {
+        ul {
+            li:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}

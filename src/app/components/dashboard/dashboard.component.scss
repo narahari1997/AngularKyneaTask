@@ -1,0 +1,113 @@
+.container-fluid {
+    .row {
+        display: flex;
+        justify-content: space-around;
+        .padding {
+            border: 2px solid #ddd;  
+            padding: 4rem 2rem;  
+            position: relative;
+            box-sizing: content-box;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            width: 15%;
+            .adjust-icon {
+                padding: 1rem;
+                position: absolute;
+                top: -15px;
+                background-color: white;
+            }
+            #adjust-transit {
+                border: 3px solid #284bd8;
+                border-radius: 1rem;
+            }
+            #pending-result {
+                border: 3px solid #d89716;
+                border-radius: 1rem;
+            }
+            #result-pass {
+                border: 3px solid #6bf82d;
+                border-radius: 1rem;
+            }
+            #result-fail {
+                border: 3px solid #FF0000;
+                border-radius: 1rem;
+            }
+            .label-name {
+                margin-top: 1rem;
+            }
+            .transit {
+                color: #284bd8;
+            }
+            .pending-result{
+                color: #d89716;
+            }
+            .result-pass{
+                color: #6bf82d;
+            }
+            .result-fail{
+                color: #FF0000;
+            }
+            .label-no{
+                font-size: 4rem;
+            }
+        }
+        .padding:hover{
+            box-shadow: 0px 20px 15px #c2b3b3;
+        }
+        .transit-block{
+            color: #284bd8;
+        }
+        .pending-result-block{
+            color: #d89716;
+        }
+        .result-pass-block{
+            color: #6bf82d;
+        }
+        .result-fail-block{
+            color: #FF0000;
+        }
+    }
+
+    .divider-line {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        border: 2px solid #FF0000;
+    }
+    .search {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 1rem;
+        label {
+            margin-right: 1rem;
+        }
+        input{
+            margin-right: 3rem;
+            border-radius: 1rem;
+            border-color: #f0eded;
+            border-width: 1px;
+        }
+        img {
+
+        }
+    }
+    table {
+        box-shadow: 0px 20px 10px #ddd;
+        thead {
+            background-color: #939090;
+            color: #fff;
+        }
+        tbody{
+            .testname {
+                color: #52a5dd;
+            }
+            .empty-table-row {
+                background-color: #fff;
+                td {
+                    padding-bottom: 3rem;
+                    padding-top: 1.5rem;            }    
+                }
+        }
+    }
+}
+
